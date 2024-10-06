@@ -23,6 +23,7 @@ public class AlbumService {
     public AlbumDto getAlbum(Long albumId) {
         Optional<Album> res = albumRepository.findById(albumId);
         if (res.isPresent()) {
+            // res.get() : album 엔터티 반환
             AlbumDto albumDto = AlbumMapper.convertToDto(res.get());
             albumDto.setCount(photoRepository.countByAlbum_AlbumId(albumId));
             return albumDto;
