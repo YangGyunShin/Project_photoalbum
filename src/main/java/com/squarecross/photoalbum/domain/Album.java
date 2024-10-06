@@ -13,7 +13,7 @@ public class Album {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "album_id", unique = true, nullable = false)
-    private Long alumId;
+    private Long albumId;
 
     @Column(name = "album_name", unique = false, nullable = false)
     private String albumName;
@@ -29,12 +29,12 @@ public class Album {
     public Album() {
     }
 
-    public Long getAlumId() {
-        return alumId;
+    public Long getAlbumId() {
+        return albumId;
     }
 
-    public void setAlumId(Long alumId) {
-        this.alumId = alumId;
+    public void setAlbumId(Long albumId) {
+        this.albumId = albumId;
     }
 
     public String getAlbumName() {
