@@ -28,6 +28,14 @@ public class Photo {
     @Column(name = "uploaded_at", unique = false, nullable = true)
     private Date uploadedAt;
 
+    public Album getAlbum() {
+        return album;
+    }
+
+    public void setAlbum(Album album) {
+        this.album = album;
+    }
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "album_id")
     private Album album;
